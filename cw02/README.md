@@ -1,0 +1,3 @@
+# Naiwny Klasyfikator Bayesa
+
+
