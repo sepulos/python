@@ -52,19 +52,16 @@ for x in f:
     else:
         dictionary[line[-1]] = [line]
  
-print("##############")
-print("##############")
-print("##############")
-print("##############")
+print("-------------------------")
 print("Istniejące klasy decycyzyjne + liczba elementów w klasie: ")
-print("##############")
+print("-------------------------")
  
 for key in dictionary:
     print("{}, liczba elementów: {}".format(key, len(dictionary[key])))
  
-print("##############")
+print("-------------------------")
 print("Max i min:")
-print("##############")
+print("-------------------------")
  
 for indexesOfNumber in indexesOfNumbers:
     listOfAttributes = []
@@ -77,21 +74,15 @@ for indexesOfNumber in indexesOfNumbers:
             listByKeys.append(value[indexesOfNumber])
         listOfAttributesByKey[key] = listByKeys
  
- 
-    # for value in dictionary.values():
-    #     for line in value:
-    #         listOfAttributes.append(line[indexesOfNumber])
- 
-    print("##############")
-    print("##############")
+    print("------------------------------------------------------------------")
+    print("------------------------------------------------------------------")
     print("{} Max: {}; Min {}".format("a{}".format(str(indexesOfNumber + 1)), max(listOfAttributes),
                                       min(listOfAttributes)))
     unique("a{}".format(indexesOfNumber+1), listOfAttributes)
     print("Odchylenie standardowe atrybutu {}, wynosi: {}".format(indexesOfNumber+1, statistics.stdev(listOfAttributes)))
-    print("##############")
-    print("##############")
+    print("-------------------------")
     for key in listOfAttributesByKey:
         print("Odchylenie standardowe atrybutu {} w klasie decyzyjnej {}, wynosi: {}".format(indexesOfNumber+1, key, statistics.stdev(listOfAttributesByKey[key])))
  
  
-print("##############")
+print("-------------------------")
